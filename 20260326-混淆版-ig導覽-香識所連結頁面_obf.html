@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香識所｜周欣儀 諮商心理師 · 情緒實驗室 × 香護帖</title>
+
+<!-- SEO -->
+<meta name="description" content="香識所，由周欣儀諮商心理師監製。提供情緒實驗室（情緒對應精油建議）與香護帖（寵物、嬰幼兒、孕婦精油安全指南）。以香氣心理學為核心，結合神經科學與心理學研究。">
+<meta name="keywords" content="香識所,周欣儀,諮商心理師,香氣心理學,情緒實驗室,香護帖,精油,嗅覺心理學,aromachology,choulab">
+<meta name="author" content="周欣儀 諮商心理師">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://chou-psy.github.io/xiangshisuo/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="香識所｜情緒實驗室 × 香護帖">
+<meta property="og:description" content="香氣心理學品牌，由周欣儀諮商心理師監製。情緒對應精油建議，以及寵物、嬰幼兒精油安全指南。">
+<meta property="og:url" content="https://chou-psy.github.io/xiangshisuo/">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="香識所">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="香識所｜情緒實驗室 × 香護帖">
+<meta name="twitter:description" content="香氣心理學品牌，由周欣儀諮商心理師監製。情緒對應精油建議，以及寵物、嬰幼兒精油安全指南。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #c9a040;
+  --gold-l: #e8c878;
+  --gold-d: #a07828;
+  --ink: #f0ece4;
+  --ink-s: rgba(240,236,228,0.6);
+  --ink-m: rgba(240,236,228,0.35);
+  --bg: #0a0e0c;
+  --grid: rgba(180,145,80,0.07);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Noto Serif TC', serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 48px 24px;
+}
+
+/* 格子背景 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 中央暈染 */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center,
+    transparent 0%,
+    transparent 30%,
+    rgba(10,14,12,0.5) 65%,
+    rgba(10,14,12,0.92) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* 品牌標題區 */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.9s ease both;
+}
+
+.brand-name {
+  font-size: 42px;
+  font-weight: 200;
+  letter-spacing: 12px;
+  text-align: center;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.brand-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.brand-rule {
+  width: 48px;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 4px 0;
+}
+
+.brand-tagline {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: var(--ink-s);
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+/* 分隔 */
+.section-rule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.9s 0.2s ease both;
+}
+.section-rule::before,
+.section-rule::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(180,145,80,0.3));
+}
+.section-rule::after {
+  background: linear-gradient(90deg, rgba(180,145,80,0.3), transparent);
+}
+.section-rule span {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: var(--ink-m);
+  font-family: 'Cormorant Garamond', serif;
+  white-space: nowrap;
+}
+
+/* 連結按鈕 */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  border: 0.5px solid rgba(180,145,80,0.25);
+  background: rgba(180,145,80,0.04);
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.9s ease both;
+}
+
+.link-btn:nth-child(1) { animation-delay: 0.3s; }
+.link-btn:nth-child(2) { animation-delay: 0.4s; }
+.link-btn:nth-child(3) { animation-delay: 0.5s; }
+
+.link-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.link-btn:hover {
+  border-color: rgba(180,145,80,0.5);
+  background: rgba(180,145,80,0.08);
+}
+.link-btn:hover::before { opacity: 1; }
+
+.link-icon {
+  width: 36px;
+  height: 36px;
+  border: 0.5px solid rgba(180,145,80,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.link-info {
+  flex: 1;
+}
+
+.link-title {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.link-desc {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: var(--ink-m);
+}
+
+.link-arrow {
+  font-size: 12px;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+/* IG 連結 */
+.ig-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--ink-m);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  transition: color 0.2s;
+  animation: fadeUp 0.9s 0.6s ease both;
+}
+.ig-link:hover { color: var(--gold); }
+.ig-link svg { opacity: 0.5; }
+
+/* 底部 */
+.footer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeUp 0.9s 0.7s ease both;
+}
+.footer-text {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--ink-m);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 品牌標題 -->
+  <div class="brand">
+    <div class="brand-name">香識所</div>
+    <div class="brand-en">CHOULAB · SCENT</div>
+    <div class="brand-rule"></div>
+    <div class="brand-tagline">氣味，是記憶最後的入口</div>
+  </div>
+
+  <!-- 工具連結 -->
+  <div class="section-rule"><span>TOOLS</span></div>
+
+  <div class="links">
+    <a class="link-btn" href="https://chou-psy.github.io/xiangshisuo/emotion.html" target="_blank">
+      <div class="link-icon">
+        <!-- 情緒實驗室：同心圓放射，象徵嗅覺擴散與情緒波紋 -->
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="rgba(200,160,64,0.85)" stroke-width="0.6" stroke-linecap="round">
+          <circle cx="16" cy="16" r="12"/>
+          <circle cx="16" cy="16" r="7"/>
+          <circle cx="16" cy="16" r="2.5" fill="rgba(200,160,64,0.4)" stroke="rgba(200,160,64,0.85)"/>
+          <line x1="16" y1="4" x2="16" y2="8.5"/>
+          <line x1="16" y1="23.5" x2="16" y2="28"/>
+          <line x1="4" y1="16" x2="8.5" y2="16"/>
+          <line x1="23.5" y1="16" x2="28" y2="16"/>
+          <line x1="7.5" y1="7.5" x2="10.5" y2="10.5"/>
+          <line x1="21.5" y1="21.5" x2="24.5" y2="24.5"/>
+          <line x1="24.5" y1="7.5" x2="21.5" y2="10.5"/>
+          <line x1="10.5" y1="21.5" x2="7.5" y2="24.5"/>
+        </svg>
+      </div>
+      <div class="link-info">
+        <div class="link-title">情緒實驗室</div>
+        <div class="link-desc">情緒對應 · 智能複方建議</div>
+      </div>
+      <div class="link-arrow">→</div>
+    </a>
+
+    <a class="link-btn" href="https://chou-psy.github.io/xiangshisuo/xianghutieh.html" target="_blank">
+      <div class="link-icon">
+        <!-- 香護帖：六角形內含葉脈線，象徵自然保護結構 -->
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="rgba(200,160,64,0.85)" stroke-width="0.6" stroke-linecap="round">
+          <polygon points="16,2 28,9 28,23 16,30 4,23 4,9"/>
+          <line x1="16" y1="8" x2="16" y2="24"/>
+          <line x1="16" y1="14" x2="22" y2="10"/>
+          <line x1="16" y1="14" x2="10" y2="10"/>
+          <line x1="16" y1="18" x2="22" y2="22"/>
+          <line x1="16" y1="18" x2="10" y2="22"/>
+          <circle cx="16" cy="16" r="1.2" fill="rgba(200,160,64,0.6)" stroke="none"/>
+        </svg>
+      </div>
+      <div class="link-info">
+        <div class="link-title">香護帖</div>
+        <div class="link-desc">寵物 · 嬰幼兒 · 孕婦精油安全指南</div>
+      </div>
+      <div class="link-arrow">→</div>
+    </a>
+
+    <a class="link-btn" href="https://instagram.com/psychologist.chou" target="_blank">
+      <div class="link-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(200,160,64,0.85)" stroke-width="0.7" stroke-linecap="round">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.8" fill="rgba(200,160,64,0.85)" stroke="none"/>
+        </svg>
+      </div>
+      <div class="link-info">
+        <div class="link-title">周欣儀｜諮商心理師</div>
+        <div class="link-desc">@psychologist.chou</div>
+      </div>
+      <div class="link-arrow">→</div>
+    </a>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="footer-text">© 2026 心理師監製 · 香氣心理學</div>
+  </div>
+
+</div>
+</body>
+</html>
