@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#0e0c0a"/>
-  <polygon points="16,2 29,9.5 29,22.5 16,30 3,22.5 3,9.5" fill="none" stroke="#b8965a" stroke-width="1.2"/>
-  <text x="16" y="21.5" font-family="serif" font-size="13" font-weight="400" fill="#b8965a" text-anchor="middle" dominant-baseline="middle">周</text>
-</svg>
